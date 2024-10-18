@@ -1,8 +1,8 @@
 # Project 2: PowerBI Reseller Performance Report
 Adventure Works Reseller Sales Performance Report
 
-  <img src="https://github.com/user-attachments/assets/c0cdb122-3d3c-4873-b796-49ade112d396" alt="dash" width="900" />
-
+   
+<img src="https://github.com/user-attachments/assets/fcd4f93a-99cf-4ac3-a002-2ed5813cd5ce" alt="dash" width="900" />
 
 # Table of Contents 
 - [Project Overview](#project-overview)
@@ -82,10 +82,68 @@ ORDER BY ResellerID;
     
 # Data Analysis and Building the Report
 
-To build the report 
+## Report Brainstorm
+Before creating the report, I thought about what kind of visuals and features I could add that would allow end users to easily understand the data and gain valuable insights from. I knew I wanted to include:
+- A Slicer between sales and quantity
+- YTD vs PYTD comparison
+- MoM comparison
+- Filter to swap between different countries 
+- Top performing resellers
+- Product category performance 
 
 
-<img src="https://github.com/user-attachments/assets/a6ac4352-e5a0-43c9-96cc-85142f32f8c5" alt="model" width="700" />
+## Creating the Report 
+Steps in creating the report: 
+
+1. Imported the SQL queries into PowerBI to create the fact and dim tables. 
+2. Created a Dim Date table to allow for date filtering, as well as a calculated column to determine if a date is one year in the past for when filtering for PYTD later down the line.
+3. Connected the different tables in the model view (STAR schema).
+<p align="center">   
+<img src="https://github.com/user-attachments/assets/a6ac4352-e5a0-43c9-96cc-85142f32f8c5" alt="model" width="600" />
+</p> 
+
+4. Created all of the measures (did the dynamic title measures after the visuals had been created). The different types of measures included YTD, PYTD, YTD vs PYTD, and switch measures.
+<p align="center">     
+<img src="https://github.com/user-attachments/assets/b24730e4-31a5-48fc-85c0-59f12a6d4d07" alt="measures" width="200" />
+</p> 
+
+Examples of some DAX used to create measures: 
+
+```dax
+Switch_PYTD = 
+VAR selected_value =SELECTEDVALUE(Slicer_Values[Values])
+VAR result = SWITCH(selected_value,
+    "Sales", [PYTD_Sales],
+    "Quantity", [PYTD_Quantity],
+    BLANK()
+)
+RETURN
+result
+```
+```dax
+Inpast = 
+VAR lastsalesdate = MAX(Fact_Sales[OrderDate])
+VAR lastsalesdatePY = EDATE(lastsalesdate,-12)
+RETURN
+Dim_Date[Date] <= lastsalesdatePY
+```
+```dax
+PYTD_Sales = 
+    CALCULATE(
+        [Sales], 
+        SAMEPERIODLASTYEAR(Dim_Date[Date]), 
+        Dim_Date[Inpast] = TRUE()
+    )
+```
+
+5. Built the different visuals (cards, tree map, waterfall chart, bar chart, column chart).
+   - Altered color palette.
+   - Created sales/quantity slicer and year select dropdown.
+   - Applied conditional formating on the visuals to make them easier to understand.
+   - Added drill downs in the waterfall chart (month -> country -> product) and in the column chart (quarter -> month) to allow for further analysis and data exploration.
+   - Created dynamic titles for the report and visuals when switching between sales and quanity slicer. 
+
+
 
 
 
