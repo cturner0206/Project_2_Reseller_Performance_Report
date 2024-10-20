@@ -102,12 +102,12 @@ Steps in creating the report:
 <img src="https://github.com/user-attachments/assets/a6ac4352-e5a0-43c9-96cc-85142f32f8c5" alt="model" width="600" />
 </p> 
 
-4. Created all of the measures (did the dynamic title measures after the visuals had been created). The different types of measures included YTD, PYTD, YTD vs PYTD, and switch measures.
+4. Created most of the measures (did the dynamic title measures after the visuals had been created). The different types of measures included YTD, PYTD, YTD vs PYTD, and switch measures.
 <p align="center">     
 <img src="https://github.com/user-attachments/assets/b24730e4-31a5-48fc-85c0-59f12a6d4d07" alt="measures" width="200" />
 </p> 
 
-Examples of some DAX used to create measures: 
+Examples of some of the DAX used to create measures: 
 
 ```dax
 Switch_PYTD = 
@@ -144,12 +144,18 @@ PYTD_Sales =
    - Created dynamic titles for the report and visuals when switching between sales and quanity slicer. 
 
 
-
-
-
 # Findings
 
-.
+- Sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
+- .
+
+### Missing Data Notice
+Some months are completely empty of data, which can skew the overall results of the report. It's unclear as to why there are missing data points, but it likey stems from the original database file itself. 
+- In 2021, the months of Feburary, April, and June don't have any reseller data (likely data loss/data issue stemming from the dataset)
+- December 2023 is also blank (either data loss issue or Q4 was incomplete at the time of creating the dataset). 
+
+ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5m while the YTD in 2022 is at 28.19m because the PYTD in 2023 is not accounting for December as there is no data for December in 2023 like in 2022. 
+
   
 # Recommendations
 
