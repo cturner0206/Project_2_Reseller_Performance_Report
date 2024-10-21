@@ -83,7 +83,7 @@ ORDER BY ResellerID;
 # Data Analysis and Building the Report
 
 ## Report Brainstorm
-Before creating the report, I thought about what kind of visuals and features I could add that would allow end users to easily understand the data and gain valuable insights from. I knew I wanted to include:
+Before creating the report, I thought about what kind of visuals and features I could add that would allow end users to gain valuable insights while also being easily understandable. I knew I wanted to include:
 - A Slicer between sales and quantity
 - YTD vs PYTD comparison
 - MoM comparison
@@ -146,19 +146,29 @@ PYTD_Sales =
 
 # Findings
 
-- Sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
-- .
+### Sales
+- Total sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
+- In 2021, the United States resellers made up 79.16% of total sales, then Canada at 19.79%, France at 0.53%, and United Kingdom at 0.44%)
+	- In 2022, the United States resellers made up 69.60% of total sales, then Canada at 19.44%, United Kingdom at 5.25%, France at 4.93%, Germany at 0.64%, and Australia at 0.18%.)
+	- In 2023, the United States resellers made up 57.19% of total sales, then Canada at 15.4%, France at 9.29%, United Kingdom at 8.1%, Germany at 5.36%, and Australia at 4.59%.)
+- In 2023, the newer countries of Germany, France, Australia, and the United Kingdom all surpased both the United States and Canada for haivng a higher YTD vs PYTD sales difference.
+- Canada had a major fall-off in sales in 2023 compared to 2022 (1.88m to 205k)????????????????????????????
+
+### Quantity
+- The change in quantity per country follows the same trend as sales, where the United States and Canada make up most of the total quantity from 2021-2023 and YTD vs PYTD from 2021-2022. In 2023, the newer countries of Germany, France, Australia, and the United Kingdom catch up to the United States in the YTD vs PYTD quantity difference. Canada 
+
+
 
 ### Missing Data Notice
 Some months are completely empty of data, which can skew the overall results of the report. It's unclear as to why there are missing data points, but it likey stems from the original database file itself. 
 - In 2021, the months of Feburary, April, and June don't have any reseller data (likely data loss/data issue stemming from the dataset)
 - December 2023 is also blank (either data loss issue or Q4 was incomplete at the time of creating the dataset). 
 
- An example where this is noticable is the card for PYTD sales in 2023 is at 25.5m while the YTD in 2022 is at 28.19m because the PYTD in 2023 is not accounting for December as there is no data for December in 2023 like in 2022. 
+An example where this is noticable is the card for PYTD sales in 2023 is at 25.5m while the YTD in 2022 is at 28.19m because the PYTD in 2023 is not accounting for December as there is no data for December in 2023 like in 2022. 
 
   
 # Recommendations
 
-.
+- d
 
 
