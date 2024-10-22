@@ -146,19 +146,6 @@ PYTD_Sales =
 
 # Findings
 
-### Sales
-- Total sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
-- In 2021, the United States resellers made up 79.16% of total sales, then Canada at 19.79%, France at 0.53%, and United Kingdom at 0.44%)
-	- In 2022, the United States resellers made up 69.60% of total sales, then Canada at 19.44%, United Kingdom at 5.25%, France at 4.93%, Germany at 0.64%, and Australia at 0.18%.)
-	- In 2023, the United States resellers made up 57.19% of total sales, then Canada at 15.4%, France at 9.29%, United Kingdom at 8.1%, Germany at 5.36%, and Australia at 4.59%.)
-- In 2023, the newer countries of Germany, France, Australia, and the United Kingdom all surpased both the United States and Canada for haivng a higher YTD vs PYTD sales difference.
-- Canada had a major fall-off in sales in 2023 compared to 2022 (1.88m to 205k)????????????????????????????
-
-### Quantity
-- The change in quantity per country follows the same trend as sales, where the United States and Canada make up most of the total quantity from 2021-2023 and YTD vs PYTD from 2021-2022. In 2023, the newer countries of Germany, France, Australia, and the United Kingdom catch up to the United States in the YTD vs PYTD quantity difference. Canada 
-
-
-
 ### Missing Data Notice
 Some months are completely empty of data, which can skew the overall results of the report. It's unclear as to why there are missing data points, but it likey stems from the original database file itself. 
 - In 2021, the months of Feburary, April, and June don't have any reseller data (likely data loss/data issue stemming from the dataset)
@@ -166,9 +153,37 @@ Some months are completely empty of data, which can skew the overall results of 
 
 An example where this is noticable is the card for PYTD sales in 2023 is at 25.5m while the YTD in 2022 is at 28.19m because the PYTD in 2023 is not accounting for December as there is no data for December in 2023 like in 2022. 
 
+
+### Sales
+- Total sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
+- In 2021, the United States resellers made up 79.16% of total sales, then Canada at 19.79%, France at 0.53%, and United Kingdom at 0.44%)
+	- In 2022, the United States resellers made up 69.60% of total sales, then Canada at 19.44%, United Kingdom at 5.25%, France at 4.93%, Germany at 0.64%, and Australia at 0.18%.)
+	- In 2023, the United States resellers made up 57.19% of total sales, then Canada at 15.4%, France at 9.29%, United Kingdom at 8.1%, Germany at 5.36%, and Australia at 4.59%.)
+- In 2023, the newer countries of Germany, France, Australia, and the United Kingdom all surpased both the United States and Canada for haivng a higher YTD vs PYTD sales difference.
+- In 2021, the United States and Canada experienced postive YTD vs PYTD growth, however, in 2022-2023 growth has significantly slowed down. Several months out of the year have negative YTD vs PYTD values. The negative values range from being down hundreds of thousands to up around 2 million a month. 
+	- As for the other four new reseller countries, they all have positve YTD vs PYTD growth since being introduced.
+ - In the more reccent years of 2022-2023, current sales trends show that Q1 has been the highest selling quarter. Sales then dip in Q2 and Q3—where the most drastic dip occurs in Q3 over the summer. Sales then go back up in Q4 and peak in Q1 (Note that Q4 of 2023 doesn't have data for December, but given October and November both had sales around 3.3m, it's likey that December would also be near that range to boost the Q4 total to around 9-10m).
+	- 2021 shows sales starting low in Q1 and growing into Q4, however, this is expected as 2021 was when Adventure Works just started to have resellers be established. This pattern reflects the natural progression of building a business relationship with resellers
+
+
+### Quantity
+- The big takeaway from quantity is that it follows similar trends to sales—where when sales go up, so does quantity. 
+- The change in quantity per country follows the same trend as sales, where the United States and Canada make up most of the total quantity from 2021-2023 and YTD vs PYTD from 2021-2022. In 2023, the newer countries of Germany, France, Australia, and the United Kingdom catch up to the United States in the YTD vs PYTD quantity difference.
+- Like sales quarterly trends, quantity also peaks in Q1 then dips down in Q2-Q3 and rises back in Q4. 
+
+
+### Products 
+- Product category trends are consistant, where the bike category makes up the largest percentage of sales, then components as the second best selling, and lastly clothing and accessories that make up less than around 5% of total sales. 
+- In 2023, the biggest product shift was the major decline in road bikes and the stark increase in touring bikes in both the United States and Canada. In the other four countries, road bikes sales remained nearly the same while touring bikes had a major increase.
+  - In 2022, the components category had around two times the total sales as seen in 2021 and 2023. Road bikes had the most substantially product increase from the prior year when looking at all countries together. Some geographical differences include: United States being down 1.3m YTD in mountain bike sales, France and the United Kingdom had a larger mountain bike demographic along with road bikes, Germany and Australia both had touring bikes as their largest product sales increase though they both had a limited product selection as it was their first year selling.
+  - In 2021, mountain bikes and road bikes were by far the best-selling products, except in Germany, where road bikes and road frames were the two main selling products.
+
   
 # Recommendations
 
-- d
+- Manage Seasonal Fluctuations: With Q1 being the highest selling quarter, create promotions or special events leading into Q2 and Q3 to sustain momentum and mitigate dips. This could include summer promotions or targeted advertising.
+- Address Product Declines: Investigate the reasons behind the decline in road bike sales in the US and Canada. Consider redesigns, marketing campaigns, or bundle offers to rejuvenate interest.
+- Focus on Emerging Markets: Given the positive growth in countries like Germany, France, Australia, and the UK, consider tailored marketing strategies for these regions. Allocate resources to enhance brand visibility and establish stronger reseller partnerships.
+- Adapt to Regional Preferences: Recognize and promote the product preferences in different markets. For example, emphasize touring bikes in regions where they are gaining popularity.
 
 
