@@ -276,17 +276,18 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
 
 # Recommendations
 
-- **Manage Seasonal Fluctuations:**  
-  With Q1 being the highest-selling quarter, create promotions or special events leading into Q2 and Q3 to sustain momentum and mitigate dips. Consider summer promotions or targeted advertising.
+**Manage Seasonal Fluctuations:**  
+  - With Q1 being the highest-selling quarter, create promotions or special events leading into Q2 and Q3 to sustain momentum and mitigate dips. Consider summer promotions or targeted advertising.
 
-- **Address Product Declines:**  
-  Investigate the reasons behind the decline in road bike sales in the US and Canada. Explore options such as redesigns, marketing campaigns, or bundle offers to rejuvenate interest.
+**Address Product Declines:**  
+  - Investigate the reasons behind the decline in road bike sales in the US and Canada. Explore options such as redesigns, marketing campaigns, or bundle offers to rejuvenate interest.
 
-- **Focus on Emerging Markets:**  
-  Given the positive growth in countries like Germany, France, Australia, and the UK, consider tailored marketing strategies for these regions. Allocate resources to enhance brand visibility and establish stronger reseller partnerships.
+**Focus on Emerging Markets:**  
+  - Given the positive growth in countries like Germany, France, Australia, and the UK, consider tailored marketing strategies for these regions. 
+  - Allocate resources to enhance brand visibility and establish stronger reseller partnerships.
 
-- **Adapt to Regional Preferences:**  
-  Recognize and promote product preferences in different markets. For example, emphasize touring bikes in regions where they are gaining popularity.
+**Adapt to Regional Preferences:**  
+  - Recognize and promote product preferences in different markets. For example, emphasize touring bikes in regions where they are gaining popularity.
 
 
 
