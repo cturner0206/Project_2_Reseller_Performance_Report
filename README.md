@@ -1,6 +1,4 @@
 # Project 2: PowerBI Reseller Performance Report
-Adventure Works Reseller Sales Performance Report
-
    
 <img src="https://github.com/user-attachments/assets/fcd4f93a-99cf-4ac3-a002-2ed5813cd5ce" alt="dash" width="900" />
 
@@ -8,26 +6,56 @@ Adventure Works Reseller Sales Performance Report
 - [Project Overview](#project-overview)
 - [Data Source](#data-source)
 - [Data Preparation and Cleaning](#data-preparation-and-cleaning)
-- [Data Analysis and Building the Report](#data-analysis-and-building-the-report)
+- [Process of Building the Report](#process-of-building-the-report)
 - [Findings](#findings)
 - [Recommendations](#recommendations)
 
+
 # Project Overview
 
-The goal of this project was to query necessary data from the Adventure Works database (SSMS) and use it to create an interactive dashboard in PowerBI. The dashboard aims to provide insights into Adventure Work's reseller sales performance from 2021-2023 to look at present and past sales trends, track new reseller regions being introduced, look into product popularity, and differences in regional sales to facilitate informed decision-making and future strategic planning. 
+The goal of this project was to query necessary data from the Adventure Works database (using SQL Server Management Studio) and create an interactive dashboard in Power BI. 
+
+### Objectives of the Dashboard:
+- **Analyze Sales Performance:**  
+  Provide insights into Adventure Works' reseller sales performance from 2021 to 2023, highlighting both present and past sales trends.
+
+- **Track New Reseller Regions:**  
+  Monitor the introduction of new reseller regions and their impact on overall sales.
+
+- **Assess Product Popularity:**  
+  Evaluate the popularity of different products across various markets.
+
+- **Examine Regional Sales Differences:**  
+  Investigate differences in sales performance by region to facilitate informed decision-making and future strategic planning.
+
 
 # Data Source
+The data being used for this project is from the `AdventureWorksDW2022.bak` database file. 
 
-The data being used for this project is from the AdventureWorksDW2022.bak dataset. 
 
 # Data Preparation and Cleaning
 
-The initial data preparation/cleaning phase involved:
+The initial data preparation and cleaning phase involved the following steps:
 
-- Loading and restoring the AdventureWorksDW2022.bak file in SQL Server Management Studio.
-- Looking through the different database tables to get a better understanding of the data provied and the connections between the tables.
-- Given the numerous tables, I had to decide what information would be worth querying to be used for the report. I decided on having one sales fact table and two dimension tables of resellers and products.
-- The data cleaning consisted of renaming columns, rounding values, selecting an order date range, converting the date column, and joining tables.
+- **Loading the Database:**  
+  Loaded and restored the `AdventureWorksDW2022.bak` file in SQL Server Management Studio.
+
+- **Exploring Database Tables:**  
+  Reviewed the various database tables to understand the data provided and the relationships between them.
+
+- **Selecting Relevant Data:**  
+  With numerous tables available, I determined which information would be valuable for the report. I opted to use:
+  - One sales fact table
+  - Two dimension tables: resellers and products
+
+- **Data Cleaning:**  
+  The data cleaning process included:
+  - Renaming columns for clarity
+  - Rounding numerical values
+  - Selecting a specific order date range
+  - Converting the date column to the appropriate format
+  - Joining relevant tables to get all necessary data for the table queries
+
 
 The final three table queries:
 
@@ -80,7 +108,7 @@ JOIN DimGeography DG ON DRS.GeographyKey = DG.GeographyKey
 ORDER BY ResellerID;
 ```
     
-# Data Analysis and Building the Report
+# Process of Building the Report
 
 ## Report Brainstorm
 Before creating the report, I thought about what kind of visuals and features I could add that would allow end users to gain valuable insights while also being easily understandable. I knew I wanted to include:
@@ -92,17 +120,28 @@ Before creating the report, I thought about what kind of visuals and features I 
 - Product category performance 
 
 
-## Creating the Report 
-Steps in creating the report: 
+## Creating the Report
 
-1. Imported the SQL queries into PowerBI to create the fact and dim tables. 
-2. Created a Dim Date table to allow for date filtering, as well as a calculated column to determine if a date is one year in the past for when filtering for PYTD later down the line.
-3. Connected the different tables in the model view (STAR schema).
+### Steps in Creating the Report:
+
+### 1. **Import SQL Queries:**  
+   Imported the SQL queries into Power BI to create the fact and dimension tables.
+
+### 2. **Create Dim Date Table:**  
+   Created a Dim Date table to enable date filtering. Created a calculated column to identify dates that are one year in the past for future PYTD analysis.
+
+### 3. **Connect Tables in Model View:**  
+   Established connections between different tables in the model view, using a STAR schema design.
 <p align="center">   
 <img src="https://github.com/user-attachments/assets/a6ac4352-e5a0-43c9-96cc-85142f32f8c5" alt="model" width="600" />
 </p> 
 
-4. Created most of the measures (did the dynamic title measures after the visuals had been created). The different types of measures included YTD, PYTD, YTD vs PYTD, and switch measures.
+### 4. **Create Measures:**  
+   Developed most of the measures (dynamic title measures were created after the visuals). The types of measures included:
+   - Year-to-Date (YTD)
+   - Prior Year-to-Date (PYTD)
+   - YTD vs. PYTD
+   - Switch measures
 <p align="center">     
 <img src="https://github.com/user-attachments/assets/b24730e4-31a5-48fc-85c0-59f12a6d4d07" alt="measures" width="200" />
 </p> 
@@ -136,17 +175,21 @@ PYTD_Sales =
     )
 ```
 
-5. Built the different visuals (cards, tree map, waterfall chart, bar chart, column chart).
-   - Altered color palette.
-   - Created sales/quantity slicer and year select dropdown.
-   - Applied conditional formating on the visuals to make them easier to understand.
-   - Added drill downs in the waterfall chart (month -> country -> product) and in the column chart (quarter -> month) to allow for further analysis and data exploration.
-   - Created dynamic titles for the report and visuals when switching between sales and quanity slicer. 
+### 5. **Built the different visuals**
+   - Created cards, tree map, waterfall chart, bar chart, column chart.
+   - Altered the color palette for better aesthetics.
+   - Created slicers for sales/quantity and a dropdown for year selection.
+   - Applied conditional formatting to improve visual clarity.
+   - Enabled drill-down functionality for further data analysis:
+     - Waterfall chart (month → country → product)
+     - Column chart (quarter → month) 
+   - Created dynamic titles for the report and visuals, allowing for seamless switching between sales and quantity slicers.
+
 
 
 # Findings
 
-### Missing Data Notice
+## Missing Data Notice
 Some months are completely empty of data, which can skew the overall results of the report. It's unclear as to why there are missing data points, but it likey stems from the original database file itself. 
 - In 2021, the months of Feburary, April, and June don't have any reseller data (likely data loss/data issue stemming from the dataset)
 - December 2023 is also blank (either data loss issue or Q4 was incomplete at the time of creating the dataset). 
@@ -154,36 +197,96 @@ Some months are completely empty of data, which can skew the overall results of 
 An example where this is noticable is the card for PYTD sales in 2023 is at 25.5m while the YTD in 2022 is at 28.19m because the PYTD in 2023 is not accounting for December as there is no data for December in 2023 like in 2022. 
 
 
-### Sales
-- Total sales have increased by 55% from 2021 to 2022 and increased 19.1% from 2022 to 2023.
-- In 2021, the United States resellers made up 79.16% of total sales, then Canada at 19.79%, France at 0.53%, and United Kingdom at 0.44%)
-	- In 2022, the United States resellers made up 69.60% of total sales, then Canada at 19.44%, United Kingdom at 5.25%, France at 4.93%, Germany at 0.64%, and Australia at 0.18%.)
-	- In 2023, the United States resellers made up 57.19% of total sales, then Canada at 15.4%, France at 9.29%, United Kingdom at 8.1%, Germany at 5.36%, and Australia at 4.59%.)
-- In 2023, the newer countries of Germany, France, Australia, and the United Kingdom all surpased both the United States and Canada for haivng a higher YTD vs PYTD sales difference.
-- In 2021, the United States and Canada experienced postive YTD vs PYTD growth, however, in 2022-2023 growth has significantly slowed down. Several months out of the year have negative YTD vs PYTD values. The negative values range from being down hundreds of thousands to up around 2 million a month. 
-	- As for the other four new reseller countries, they all have positve YTD vs PYTD growth since being introduced.
- - In the more reccent years of 2022-2023, current sales trends show that Q1 has been the highest selling quarter. Sales then dip in Q2 and Q3—where the most drastic dip occurs in Q3 over the summer. Sales then go back up in Q4 and peak in Q1 (Note that Q4 of 2023 doesn't have data for December, but given October and November both had sales around 3.3m, it's likey that December would also be near that range to boost the Q4 total to around 9-10m).
-	- 2021 shows sales starting low in Q1 and growing into Q4, however, this is expected as 2021 was when Adventure Works just started to have resellers be established. This pattern reflects the natural progression of building a business relationship with resellers
+## Sales Overview
 
+### Sales Growth
+- Total sales increased by **55%** from 2021 to 2022.
+- Total sales increased by **19.1%** from 2022 to 2023.
 
-### Quantity
-- The big takeaway from quantity is that it follows similar trends to sales—where when sales go up, so does quantity. 
-- The change in quantity per country follows the same trend as sales, where the United States and Canada make up most of the total quantity from 2021-2023 and YTD vs PYTD from 2021-2022. In 2023, the newer countries of Germany, France, Australia, and the United Kingdom catch up to the United States in the YTD vs PYTD quantity difference.
-- Like sales quarterly trends, quantity also peaks in Q1 then dips down in Q2-Q3 and rises back in Q4. 
+### Sales by Region
+### 2021
+- **United States:** 79.16%
+- **Canada:** 19.79%
+- **France:** 0.53%
+- **United Kingdom:** 0.44%
 
+### 2022
+- **United States:** 69.60%
+- **Canada:** 19.44%
+- **United Kingdom:** 5.25%
+- **France:** 4.93%
+- **Germany:** 0.64%
+- **Australia:** 0.18%
 
-### Products 
-- Product category trends are consistant, where the bike category makes up the largest percentage of sales, then components as the second best selling, and lastly clothing and accessories that make up less than around 5% of total sales. 
-- In 2023, the biggest product shift was the major decline in road bikes and the stark increase in touring bikes in both the United States and Canada. In the other four countries, road bikes sales remained nearly the same while touring bikes had a major increase.
-  - In 2022, the components category had around two times the total sales as seen in 2021 and 2023. Road bikes had the most substantially product increase from the prior year when looking at all countries together. Some geographical differences include: United States being down 1.3m YTD in mountain bike sales, France and the United Kingdom had a larger mountain bike demographic along with road bikes, Germany and Australia both had touring bikes as their largest product sales increase though they both had a limited product selection as it was their first year selling.
-  - In 2021, mountain bikes and road bikes were by far the best-selling products, except in Germany, where road bikes and road frames were the two main selling products.
+### 2023
+- **United States:** 57.19%
+- **Canada:** 15.4%
+- **France:** 9.29%
+- **United Kingdom:** 8.1%
+- **Germany:** 5.36%
+- **Australia:** 4.59%
 
+### Year-to-Date Sales Comparison
+- In 2023, newer markets (Germany, France, Australia, and the United Kingdom) surpassed both the United States and Canada in YTD vs. prior year-to-date (PYTD) sales growth.
+- In 2021, the United States and Canada saw positive YTD vs. PYTD growth. However, from 2022 to 2023, growth slowed significantly, with several months showing negative YTD vs. PYTD values ranging from being down hundreds of thousands to being down around $2 million per month.
+- In contrast, the newer markets have consistently shown positive YTD vs. PYTD growth since their introduction.
+
+### Sales Trends
+- From 2022 to 2023, Q1 has been the highest-selling quarter. Sales dip in Q2 and Q3, with the most significant drop occurring in Q3 during the summer. Sales rebound in Q4, peaking again in Q1. 
+  > **Note:** Q4 2023 lacks December data, but sales in October and November were around $3.3 million each, suggesting December's sales will likely boost Q4 totals to around $9-10 million.
   
+- In 2021, sales began low in Q1 and increased through Q4. This pattern reflects the natural progression of establishing reseller relationships, as 2021 was the first year Adventure Works began working with resellers.
+
+
+
+## Quantity Overview
+
+### Overall Trends 
+  - Quantity trends mirror sales trends; when sales increase, quantity also increases.
+
+### Quantity by Country
+  - From 2021 to 2023, the United States and Canada accounted for the majority of total quantity. In 2023, newer countries—Germany, France, Australia, and the United Kingdom—began to close the gap with the United States in year-to-date (YTD) vs. prior year-to-date (PYTD) quantity differences.
+
+### Quarterly Trends 
+  - Similar to sales, quantity peaks in Q1, dips in Q2 and Q3, and then rises again in Q4.
+
+
+ 
+## Product Category Trends
+
+### Overall Trends
+  Product category trends are consistent. The bike category makes up the largest percentage of sales, followed by components as the second best-selling category. Clothing and accessories account for less than 5% of total sales.
+
+### 2023 
+  - In the United States and Canada, there was a major decline in road bike sales, accompanied by a stark increase in touring bike sales.
+  - In the other four countries, road bike sales remained relatively stable, while touring bike sales saw a major increase.
+
+### 2022
+  - The components category had approximately twice the total sales compared to 2021 and 2023.
+  - Road bikes experienced the most substantial increase from the prior year across all countries. 
+  - Geographic differences included:
+    - The United States saw a decrease of $1.3 million YTD vs PYTD in mountain bike sales.
+    - France and the United Kingdom had a larger mountain bike demographic, alongside road bikes.
+    - Germany and Australia recorded touring bikes as their largest sales increase, despite having limited product selections in their first year of sales.
+
+### 2021 Overview
+  - In 2021, mountain bikes and road bikes were the best-selling products overall, except in Germany, where road bikes and road frames were the top sellers.
+
+
+
 # Recommendations
 
-- Manage Seasonal Fluctuations: With Q1 being the highest selling quarter, create promotions or special events leading into Q2 and Q3 to sustain momentum and mitigate dips. This could include summer promotions or targeted advertising.
-- Address Product Declines: Investigate the reasons behind the decline in road bike sales in the US and Canada. Consider redesigns, marketing campaigns, or bundle offers to rejuvenate interest.
-- Focus on Emerging Markets: Given the positive growth in countries like Germany, France, Australia, and the UK, consider tailored marketing strategies for these regions. Allocate resources to enhance brand visibility and establish stronger reseller partnerships.
-- Adapt to Regional Preferences: Recognize and promote the product preferences in different markets. For example, emphasize touring bikes in regions where they are gaining popularity.
+- **Manage Seasonal Fluctuations:**  
+  With Q1 being the highest-selling quarter, create promotions or special events leading into Q2 and Q3 to sustain momentum and mitigate dips. Consider summer promotions or targeted advertising.
+
+- **Address Product Declines:**  
+  Investigate the reasons behind the decline in road bike sales in the US and Canada. Explore options such as redesigns, marketing campaigns, or bundle offers to rejuvenate interest.
+
+- **Focus on Emerging Markets:**  
+  Given the positive growth in countries like Germany, France, Australia, and the UK, consider tailored marketing strategies for these regions. Allocate resources to enhance brand visibility and establish stronger reseller partnerships.
+
+- **Adapt to Regional Preferences:**  
+  Recognize and promote product preferences in different markets. For example, emphasize touring bikes in regions where they are gaining popularity.
+
 
 
