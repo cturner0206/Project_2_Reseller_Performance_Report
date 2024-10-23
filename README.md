@@ -204,6 +204,7 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
 - Total sales increased by **19.1%** from 2022 to 2023.
 
 ### Sales by Region
+
 ### 2021
 - **United States:** 79.16%
 - **Canada:** 19.79%
@@ -245,7 +246,7 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
   - Quantity trends mirror sales trends; when sales increase, quantity also increases.
 
 ### Quantity by Country
-  - From 2021 to 2023, the United States and Canada accounted for the majority of total quantity. In 2023, newer countries—Germany, France, Australia, and the United Kingdom—began to close the gap with the United States in year-to-date (YTD) vs. prior year-to-date (PYTD) quantity differences.
+  - From 2021 to 2023, the United States and Canada accounted for the majority of total quantity. In 2023, newer countries of Germany, France, Australia, and the United Kingdom began to close the gap with the United States in year-to-date (YTD) vs. prior year-to-date (PYTD) quantity differences.
 
 ### Quarterly Trends 
   - Similar to sales, quantity peaks in Q1, dips in Q2 and Q3, and then rises again in Q4.
@@ -269,7 +270,7 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
     - France and the United Kingdom had a larger mountain bike demographic, alongside road bikes.
     - Germany and Australia recorded touring bikes as their largest sales increase, despite having limited product selections in their first year of sales.
 
-### 2021 Overview
+### 2021 
   - In 2021, mountain bikes and road bikes were the best-selling products overall, except in Germany, where road bikes and road frames were the top sellers.
 
 
