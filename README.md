@@ -200,10 +200,10 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
 ## Sales Overview
 
 ### Sales Growth
-- Total sales increased by **55%** from 2021 to 2022.
-- Total sales increased by **19.1%** from 2022 to 2023.
+- Total sales increased by **55%** from **2021 to 2022**.
+- Total sales increased by **19.1%** from **2022 to 2023**.
 
-### Sales by Region
+### Percent of Total Sales by Region
 
 ### 2021
 - **United States:** 79.16%
@@ -228,15 +228,15 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
 - **Australia:** 4.59%
 
 ### Year-to-Date Sales Comparison
-- In 2023, newer markets (Germany, France, Australia, and the United Kingdom) surpassed both the United States and Canada in YTD vs. prior year-to-date (PYTD) sales growth.
-- In 2021, the United States and Canada saw positive YTD vs. PYTD growth. However, from 2022 to 2023, growth slowed significantly, with several months showing negative YTD vs. PYTD values ranging from being down hundreds of thousands to being down around $2 million per month.
-- In contrast, the newer markets have consistently shown positive YTD vs. PYTD growth since their introduction.
+- In **2023**, newer markets (Germany, France, Australia, and the United Kingdom) surpassed both the United States and Canada in **YTD vs. prior year-to-date** sales growth.
+- In **2021**, the United States and Canada saw positive **YTD vs. PYTD** growth. However, from **2022** to **2023**, growth slowed significantly, with several months showing negative **YTD vs. PYTD** values ranging from being down hundreds of thousands to being down around $2 million per month.
+- In contrast, the newer markets have consistently shown positive **YTD vs. PYTD** growth since their introduction.
 
 ### Sales Trends
-- From 2022 to 2023, Q1 has been the highest-selling quarter. Sales dip in Q2 and Q3, with the most significant drop occurring in Q3 during the summer. Sales rebound in Q4, peaking again in Q1. 
+- From **2022 to 2023**, **Q1** has been the highest-selling quarter. Sales dip in **Q2 and Q3**, with the most significant drop occurring in **Q3** during the summer. Sales rebound in **Q4**, peaking again in **Q1**. 
   > **Note:** Q4 2023 lacks December data, but sales in October and November were around $3.3 million each, suggesting December's sales will likely boost Q4 totals to around $9-10 million.
   
-- In 2021, sales began low in Q1 and increased through Q4. This pattern reflects the natural progression of establishing reseller relationships, as 2021 was the first year Adventure Works began working with resellers.
+- In **2021**, sales began low in **Q1** and increased through **Q4**. This pattern reflects the natural progression of establishing reseller relationships, as **2021** was the first year Adventure Works began working with resellers.
 
 
 
@@ -246,32 +246,32 @@ An example where this is noticable is the card for PYTD sales in 2023 is at 25.5
   - Quantity trends mirror sales trends; when sales increase, quantity also increases.
 
 ### Quantity by Country
-  - From 2021 to 2023, the United States and Canada accounted for the majority of total quantity. In 2023, newer countries of Germany, France, Australia, and the United Kingdom began to close the gap with the United States in year-to-date (YTD) vs. prior year-to-date (PYTD) quantity differences.
+  - From **2021 to 2023**, the United States and Canada accounted for the majority of total quantity. In **2023**, newer countries of Germany, France, Australia, and the United Kingdom began to close the gap with the United States in **year-to-date vs. prior year-to-date** quantity differences.
 
 ### Quarterly Trends 
-  - Similar to sales, quantity peaks in Q1, dips in Q2 and Q3, and then rises again in Q4.
+  - Similar to sales, quantity peaks in **Q1**, dips in **Q2 and Q3**, and then rises again in **Q4**.
 
 
  
 ## Product Category Trends
 
 ### Overall Trends
-  Product category trends are consistent. The bike category makes up the largest percentage of sales, followed by components as the second best-selling category. Clothing and accessories account for less than 5% of total sales.
+  Product category trends are consistent. The **bike category** makes up the largest percentage of sales, followed by **components** as the second best-selling category. **Clothing and accessories** account for less than 5% of total sales.
 
 ### 2023 
-  - In the United States and Canada, there was a major decline in road bike sales, accompanied by a stark increase in touring bike sales.
-  - In the other four countries, road bike sales remained relatively stable, while touring bike sales saw a major increase.
+  - In the United States and Canada, there was a major decline in **road bike** sales, accompanied by a stark increase in **touring bike** sales.
+  - In the other four countries, **road bike** sales remained relatively stable, while **touring bike** sales saw a major increase.
 
 ### 2022
-  - The components category had approximately twice the total sales compared to 2021 and 2023.
-  - Road bikes experienced the most substantial increase from the prior year across all countries. 
+  - The **components** category had approximately twice the total sales compared to **2021 and 2023**.
+  - **Road bikes** experienced the most substantial increase from the prior year across all countries. 
   - Geographic differences included:
-    - The United States saw a decrease of $1.3 million YTD vs PYTD in mountain bike sales.
-    - France and the United Kingdom had a larger mountain bike demographic, alongside road bikes.
-    - Germany and Australia recorded touring bikes as their largest sales increase, despite having limited product selections in their first year of sales.
+    - The United States saw a decrease of $1.3 million **YTD vs PYTD** in mountain bike sales.
+    - France and the United Kingdom had a larger **mountain bike demographic**, alongside **road bikes**.
+    - Germany and Australia recorded **touring bikes** as their largest sales increase, despite having limited product selections in their first year of sales.
 
 ### 2021 
-  - In 2021, mountain bikes and road bikes were the best-selling products overall, except in Germany, where road bikes and road frames were the top sellers.
+  - In **2021**, **mountain bikes** and **road bikes** were the best-selling products overall, except in Germany, where **road bikes** and **road frames** were the top sellers.
 
 
 
